@@ -23,8 +23,8 @@ public class GMailSender extends javax.mail.Authenticator {
     private String emailCode;
 
     public GMailSender() {
-        this.user = "yudgapt@gmail.com";
-        this.password = "1q2w3e4r!@";
+        this.user = ""; // Historical client email feature disabled: configure server-side delivery
+        this.password = ""; // Never embed SMTP secrets in Android source
         emailCode = createEmailCode();
         Properties props = new Properties();
         props.setProperty("mail.transport.protocol", "smtp");
